@@ -1,0 +1,9 @@
+
+<div *ngIf="appoint">
+  <h2>{{appoint.name}} details!</h2>
+  <div><label>id: </label>{{appoint.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="appoint.name" placeholder="name"/>
+  </div>
+</div>
