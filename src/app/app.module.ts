@@ -4,6 +4,8 @@ import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
 
 import { AppComponent }  from './app.component';
 import { AppointDetailComponent } from './appoint-detail.component';
+import { AppointsComponent } from './appoints.component';
+import { AppointService } from './appoint.service';
 
 @NgModule({
   imports: [
@@ -12,8 +14,14 @@ import { AppointDetailComponent } from './appoint-detail.component';
   ],
   declarations: [
     AppComponent,
-    AppointDetailComponent
+    AppointDetailComponent,
+    AppointsComponent
+  ],
+  providers: [
+    AppointService
   ],
   bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+
+export class AppModule {
+}
