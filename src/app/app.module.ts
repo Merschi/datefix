@@ -6,6 +6,8 @@ import { AppComponent }  from './app.component';
 import { AppointDetailComponent } from './appoint-detail.component';
 import { AppointsComponent } from './appoints.component';
 import { AppointService } from './appoint.service';
+import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 @NgModule({
   imports: [
@@ -15,10 +17,12 @@ import { AppointService } from './appoint.service';
   declarations: [
     AppComponent,
     AppointDetailComponent,
-    AppointsComponent
+    AppointsComponent,
+    MessagesComponent
   ],
   providers: [
-    AppointService
+    AppointService,
+    MessageService
   ],
   bootstrap: [ AppComponent ]
 })

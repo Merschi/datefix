@@ -17,7 +17,9 @@ export class AppointsComponent implements OnInit{
   constructor( private appointService: AppointService) {}
 
   getAppoints(): void {
-    this.appointService.getAppointsSlowly().then(appoints => this.appoints = appoints);
+    // this.appointService.getAppointsSlowly().then(appoints => this.appoints = appoints);
+    this.appointService.getAppoints()
+      .subscribe(appoints => this.appoints = appoints);
   }
 
   ngOnInit(): void {
