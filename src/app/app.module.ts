@@ -8,17 +8,21 @@ import { AppointsComponent } from './appoints.component';
 import { AppointService } from './appoint.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule // <-- import the FormsModule before binding with [(ngModel)]
+    FormsModule,
+    AppRoutingModule // <-- import the FormsModule before binding with [(ngModel)]
   ],
   declarations: [
     AppComponent,
     AppointDetailComponent,
     AppointsComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   providers: [
     AppointService,
