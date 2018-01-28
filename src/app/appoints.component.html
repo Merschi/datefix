@@ -3,13 +3,11 @@
 <h2>Actual appoints</h2>
 
 <ul class="appoints">
-  <li *ngFor="let appoint of appoints"
-      [class.selected]="appoint === selectedAppoint"
-      (click)="onSelect(appoint)">
-    <span class="badge">{{appoint.id}}</span> {{appoint.name}}
+  <li *ngFor="let appoint of appoints">
+    <a routerLink="/detail/{{appoint.id}}">
+      <span class="badge">{{appoint.id}}</span>
+      {{appoint.name}}
+    </a>
   </li>
 </ul>
-
-<appoint-detail [appoint]="selectedAppoint"></appoint-detail>
-
 

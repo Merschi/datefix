@@ -1,6 +1,7 @@
 <h3>Top Appointments</h3>
 <div class="grid grid-pad">
-  <a *ngFor="let appoint of appointss" class="col-1-4">
+  <a *ngFor="let appoint of appoints" class="col-1-4"
+     routerLink="/detail/{{appoint.id}}">
     <div class="module appoint">
       <h4>{{appoint.name}}</h4>
     </div>

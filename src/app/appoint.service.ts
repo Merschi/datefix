@@ -27,4 +27,10 @@ export class AppointService {
       setTimeout(() => resolve(this.getAppoints()), 2000);
     });
   }
+
+  getAppoint(id: number): Observable<Appoint> {
+    // Todo: send the message _after_ fetching the hero
+    this.messageService.add(`AppointService: fetched appoint id=${id}`);
+    return of(APPOINTS.find(appoint => appoint.id === id));
+  }
 }

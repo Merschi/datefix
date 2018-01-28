@@ -6,12 +6,9 @@ import { AppointService } from './appoint.service';
 @Component({
   selector: 'my-appoints',
   templateUrl: './appoints.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [AppointService]
+  styleUrls: ['./app.component.css']
 })
 export class AppointsComponent implements OnInit{
-  title = 'The date fixer';
-  selectedAppoint: Appoint;
   appoints: Appoint[];
 
   constructor( private appointService: AppointService) {}
@@ -24,10 +21,6 @@ export class AppointsComponent implements OnInit{
 
   ngOnInit(): void {
     this.getAppoints();
-  }
-
-  onSelect(appoint: Appoint): void {
-    this.selectedAppoint = appoint;
   }
 
 }
