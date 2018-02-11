@@ -6,7 +6,7 @@ import { AppointService } from './appoint.service';
 @Component({
   selector: 'my-appoints',
   templateUrl: './appoints.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./appoints.component.css']
 })
 export class AppointsComponent implements OnInit{
   appoints: Appoint[];
